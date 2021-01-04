@@ -54,6 +54,7 @@ const countdown = (element, time) => {
       console.log(durationValue)
       
       if (elem.classList.contains("inhale-value")) {
+         stroke.style.backgroundImage = `url(./img/${currentStyleBg}.jpg)`
          stroke.style.animation = `cycle ${cycleLength}s linear infinite`
       }
       
