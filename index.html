@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <main>
+      <div id="overlay"></div>
+      <div class="wrapper">
+         <div class="styles-container">
+            <div id="style1" class="style">
+               <img src="./img/1.jpg" alt="owl" class="owl">
+            </div>
+            <div id="style2" class="style">
+               <img src="./img/2.jpg" alt="bear" class="bear">
+            </div>
+            <div id="style3" class="style active">
+               <img src="./img/3.jpg" alt="turtle" class="turtle">
+            </div>
+            <div id="style4" class="style">
+               <img src="./img/4.jpg" alt="wolf" class="wolf">
+            </div>
+         </div>
+         <div class="progress">
+            <div class="track"></div>
+            <div class="stroke"></div>
+            <div class="inner">
+               <div class="prep" style="display: none;">Приготовьтесь: <div class="prep-value"></div></div>
+               <div class="inhale" style="display: none;">Вдох: <div class="inhale-value"></div></div>
+               <div class="exhale" style="display: none;">Выдох: <div class="exhale-value"></div></div>   
+            </div>
+         </div>
+
+         <div class="buttons-container">
+            <button id="timerBtn" class="start"></button>
+            <div id="setDurationBtn">
+               <div class="setDurationBtn__burger"></div>
+            </div>
+         </div>
+
+         <div class="modal-window">
+            <div class="modal-close-btn">&times;</div>
+            <input id="slider" type="range" min="0" max="3600" value="120">
+            <div class="duration">Продолжительность: <span class="duration-value">120</span></div>
+         </div>
+      </div>
+   </main>
+   <script type="module" src="script.js"></script>
+</body>
+</html>
