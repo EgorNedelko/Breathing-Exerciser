@@ -628,9 +628,9 @@ body {
   height: 70%;
   border-radius: 50%;
   background: url("../../../assets/img/0.jpg");
-  background-size: 243%;
+  background-size: 204%;
   background-repeat: no-repeat;
-  background-position: 50% 22%;
+  background-position: 50% 35%;
 }
 
 .prep, .inhale, .exhale {
