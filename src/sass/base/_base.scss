@@ -1,0 +1,14 @@
+html {
+   font-size: 10px;   
+}
+
+body {
+   font-family: Arial, Helvetica, sans-serif;
+   // @extend %font-prim; //body font-family is inherited by all p, h1-7, etc. elems
+   @include font ($size: 1.6rem, $height: 2.6rem, $weight: normal);
+}
+
+.block-shadowed {
+   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+   border-radius: 10px;
+}

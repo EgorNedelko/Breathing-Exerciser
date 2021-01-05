@@ -1,4 +1,4 @@
-import cycles from "./cycles.js"
+import cycles from "../cycles.js"
 let currentStyleInhale = cycles[2].inhale
 let currentStyleExhale = cycles[2].exhale
 let currentStyleBg = cycles[2].bg
@@ -36,7 +36,7 @@ const stopCountdown = () => {
    prepTimer.innerHTML = 3
    inhaleTimer.innerHTML = currentStyleInhale
    exhaleTimer.innerHTML = currentStyleExhale
-   stroke.style.backgroundImage = `url(./img/${currentStyleBg}.jpg)`
+   stroke.style.backgroundImage = `url(../assets/img/${currentStyleBg}.jpg)`
 }
 
 const countdown = (element, time) => {
@@ -54,7 +54,7 @@ const countdown = (element, time) => {
       console.log(durationValue)
       
       if (elem.classList.contains("inhale-value")) {
-         stroke.style.backgroundImage = `url(./img/${currentStyleBg}.jpg)`
+         stroke.style.backgroundImage = `url(../assets/img/${currentStyleBg}.jpg)`
          stroke.style.animation = `cycle ${cycleLength}s linear infinite`
       }
       
@@ -163,7 +163,7 @@ const changeStyle = (e) => {
    inhaleTimer.innerHTML = currentStyleInhale
    exhaleTimer.innerHTML = currentStyleExhale
    currentStyleBg = cycles[id].bg
-   stroke.style.backgroundImage = `url(./img/${currentStyleBg}.jpg)`
+   stroke.style.backgroundImage = `url(../assets/img/${currentStyleBg}.jpg)`
 }
 
 const displayDuration = (durationValue) => {

@@ -1,0 +1,74 @@
+.controls-container {
+  margin: 30px auto;
+  max-width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// .controls-container>*:first-child {
+//   margin-right: 50px;
+// }
+
+#timerBtn, #setDurationBtn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+#timerBtn.start {
+  background: url(../../assets/icon/play-ico.png);
+  background-size: cover;
+}
+
+#timerBtn.pause {
+  background: url(../../assets/icon/pause-ico.png);
+  background-size: cover;
+}
+
+#setDurationBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s ease;
+}
+
+.setDurationBtn__burger {
+   width: 40px;
+   height: 2.5px;
+   background: #000;
+   border-radius: 5px;
+   box-shadow: 0 2px 5px rgba(255,101,47,.2);
+   transition: all .5s ease-in-out;
+ }
+ .setDurationBtn__burger::before,
+ .setDurationBtn__burger::after {
+   content: '';
+   position: absolute;
+   width: 40px;
+   height: 2.5px;
+   background: #000;
+   border-radius: 5px;
+   transition: all .5s ease-in-out;
+ }
+ .setDurationBtn__burger::before {
+   transform: translateY(-10px);
+ }
+ .setDurationBtn__burger::after {
+   transform: translateY(10px);
+ }
+ /* ANIMATION */
+ #setDurationBtn.open .setDurationBtn__burger {
+   transform: translateX(-50px);
+   background: transparent;
+   box-shadow: none;
+ }
+ #setDurationBtn.open .setDurationBtn__burger::before {
+   transform: rotate(45deg) translate(35px, -35px);
+ }
+ #setDurationBtn.open .setDurationBtn__burger::after {
+   transform: rotate(-45deg) translate(35px, 35px);
+ }

@@ -1,0 +1,32 @@
+.styles-container {
+   margin: 0 auto;
+   padding: 30px;
+   max-width: 90%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.style {
+   width: 50px;
+   height: 50px;
+   font-size: 14px;
+   line-height: 50px;
+   text-align: center;
+   // background-color: red;
+   border: 1px solid black;
+   cursor: pointer;
+}
+
+.style img {
+   max-width: 100%;
+   cursor: pointer;
+} 
+
+.style.active {
+   border: 2px solid rgb(0, 199, 0);
+}
+
+.style:hover {
+   background-color: rgb(145, 189, 204);
+}

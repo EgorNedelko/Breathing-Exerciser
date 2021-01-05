@@ -1,0 +1,16 @@
+.wrapper {
+   max-width: $content-width;
+   height: 480px;
+   margin: 0 auto;
+   background: url("../../../assets/img/0.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+
+   // @include media-tablet {
+   //    padding: 0 46px;
+   // }
+
+   // @include media-mobile {
+   //    padding: 0 21px;
+   // }
+}
