@@ -592,7 +592,6 @@ body {
 }
 
 .track {
-  /* position: relative; */
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -634,7 +633,7 @@ body {
 }
 
 .prep, .inhale, .exhale {
-  padding-top: 20px;
+  padding-top: 30px;
   font-size: 1.4rem;
 }
 
