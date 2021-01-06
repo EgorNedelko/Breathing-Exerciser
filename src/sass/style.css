@@ -453,6 +453,7 @@ body {
 }
 
 .wrapper {
+  position: relative;
   max-width: 317px;
   height: 480px;
   margin: 0 auto;
