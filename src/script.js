@@ -36,7 +36,7 @@ const stopCountdown = () => {
    prepTimer.innerHTML = 3
    inhaleTimer.innerHTML = currentStyleInhale
    exhaleTimer.innerHTML = currentStyleExhale
-   stroke.style.backgroundImage = `url(../assets/img/${currentStyleBg}.jpg)`
+   stroke.style.backgroundImage = `url(../assets/img/${currentStyleBg}.png)`
 }
 
 const countdown = (element, time) => {
@@ -54,7 +54,7 @@ const countdown = (element, time) => {
       console.log(durationValue)
       
       if (elem.classList.contains("inhale-value")) {
-         stroke.style.backgroundImage = `url(../assets/img/${currentStyleBg}.jpg)`
+         stroke.style.backgroundImage = `url(../assets/img/${currentStyleBg}.png)`
          stroke.style.animation = `cycle ${cycleLength}s linear infinite`
       }
       
@@ -163,7 +163,7 @@ const changeStyle = (e) => {
    inhaleTimer.innerHTML = currentStyleInhale
    exhaleTimer.innerHTML = currentStyleExhale
    currentStyleBg = cycles[id].bg
-   stroke.style.backgroundImage = `url(../assets/img/${currentStyleBg}.jpg)`
+   stroke.style.backgroundImage = `url(../assets/img/${currentStyleBg}.png)`
 }
 
 const displayDuration = (durationValue) => {
