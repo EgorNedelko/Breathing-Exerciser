@@ -23,6 +23,7 @@ let durationMenuOpen = false
 let durationValue = 0
 let isPaused = true
 let interval = 0
+let audio
 
 const setDuration = (e) => {
    durationValue = e.target.value
@@ -91,11 +92,33 @@ const countdown = (element, time) => {
 
             if (elem.classList.contains("prep-value")) {
                toggleVisibility(inhaleElem, inhaleTimer)
+               
+               if (currentStyleInhale == 1) {
+                  audio = document.querySelector('audio[data-audio-inhale1sec]')
+               } else if (currentStyleInhale == 2) {
+                  audio = document.querySelector('audio[data-audio-inhale2sec]')
+               } else if (currentStyleInhale == 7) {
+                  audio = document.querySelector('audio[data-audio-inhale7sec]')
+               }
+
+               audio.currentTime = 0
+               audio.play()
                inhale(inhaleTimer, currentStyleInhale)
             }
             
             if (elem.classList.contains("inhale-value")) {
                toggleVisibility(exhaleElem, exhaleTimer)
+
+               if (currentStyleExhale == 1) {
+                  audio = document.querySelector('audio[data-audio-exhale1sec]')
+               } else if (currentStyleExhale == 2) {
+                  audio = document.querySelector('audio[data-audio-exhale2sec]')
+               } else if (currentStyleExhale == 7) {
+                  audio = document.querySelector('audio[data-audio-exhale7sec]')
+               }
+
+               audio.currentTime = 0
+               audio.play()
                exhale(exhaleTimer, currentStyleExhale)
             }
 
@@ -105,13 +128,22 @@ const countdown = (element, time) => {
                   inhaleTimer.innerHTML = currentStyleInhale
                   exhaleTimer.innerHTML = currentStyleExhale
                   toggleVisibility(inhaleElem, inhaleTimer)
+
+                  if (currentStyleInhale == 1) {
+                     audio = document.querySelector('audio[data-audio-inhale1sec]')
+                  } else if (currentStyleInhale == 2) {
+                     audio = document.querySelector('audio[data-audio-inhale2sec]')
+                  } else if (currentStyleInhale == 7) {
+                     audio = document.querySelector('audio[data-audio-inhale7sec]')
+                  }
+
+                  audio.currentTime = 0
+                  audio.play()
                   inhale(inhaleTimer, currentStyleInhale)
                } else {
                   stroke.removeAttribute("style")
-                  // stroke.style.display = 'none'
                   isPaused = true
                   timerBtn.className = "start"
-                  // timerBtn.innerHTML = "Start"
                   return
                }
             }
@@ -217,6 +249,7 @@ window.addEventListener('DOMContentLoaded', () => {
 slider.addEventListener('input', (e) => {
    hideTimers()
    stopCountdown()
+   audio.pause()
    setDuration(e)
 })
 
@@ -224,6 +257,7 @@ timerBtn.addEventListener('click', () => {
    if (isPaused == false) {
       hideTimers()
       stopCountdown()
+      audio.pause()
       timerBtn.className = "start"
    } else {
       isPaused = false
@@ -236,6 +270,7 @@ timerBtn.addEventListener('click', () => {
 styles.forEach(style => style.addEventListener('click', (e) => {
    hideTimers()
    stopCountdown()
+   audio.pause()
    changeStyle(e)
 }))
 
@@ -243,6 +278,7 @@ setDurationBtn.addEventListener('click', () => {
    // if (!durationMenuOpen) {
       setDurationBtn.classList.add('open')
       stopCountdown()
+      audio.pause()
       hideTimers()
       openModal()
       durationMenuOpen = true
