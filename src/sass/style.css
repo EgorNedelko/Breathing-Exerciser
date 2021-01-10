@@ -461,7 +461,7 @@ body {
 }
 
 .controls-container {
-  margin: 30px auto;
+  margin: 40px auto;
   max-width: 45%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -697,7 +697,7 @@ body {
 
 .styles-container {
   margin: 0 auto;
-  padding: 30px;
+  padding: 40px 30px 50px;
   max-width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
