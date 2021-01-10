@@ -3,6 +3,7 @@ let currentStyleInhale = cycles[2].inhale
 let currentStyleExhale = cycles[2].exhale
 let currentStyleBg = cycles[2].bg
 
+const passInput = document.querySelector(".pass-input")
 const styles = document.querySelectorAll(".style")
 const slider = document.getElementById("slider")
 const timerBtn = document.getElementById("timerBtn")
@@ -19,7 +20,6 @@ const overlay = document.getElementById("overlay")
 const modalWindow = document.querySelector(".modal-window")
 const modalCloseBtn = document.querySelector(".modal-close-btn")
 const tapSound = document.querySelector("audio[data-audio-tap]")
-const combination = '09876'
 let durationMenuOpen = false
 let durationValue = 0
 let isPaused = true
@@ -298,4 +298,10 @@ modalCloseBtn.addEventListener('click', () => {
    setDurationBtn.classList.remove('open')
    closeModal()
    durationMenuOpen = false
+})
+
+passInput.addEventListener('input', (e) => {
+   if (passInput.value == '09876') {
+      document.querySelector(".pass-window").style.display = "none"
+   }
 })

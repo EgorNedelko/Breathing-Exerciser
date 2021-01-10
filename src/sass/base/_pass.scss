@@ -1,0 +1,19 @@
+.pass-window {
+   z-index: 1000;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: radial-gradient(circle, rgba(233,233,233,1) 0%, rgba(245,245,245,1) 50%, rgba(222,222,222,1) 100%);
+   transition: all 0.5s ease;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.pass-input {
+   padding: 10px;
+   font-size: 1.6rem;
+   letter-spacing: 0.6rem;
+   text-align: center;
+   outline: none;
+}

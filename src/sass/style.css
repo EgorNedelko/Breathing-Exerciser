@@ -450,6 +450,33 @@ body {
   pointer-events: none;
 }
 
+.pass-window {
+  z-index: 1000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #e9e9e9 0%, whitesmoke 50%, #dedede 100%);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pass-input {
+  padding: 10px;
+  font-size: 1.6rem;
+  letter-spacing: 0.6rem;
+  text-align: center;
+  outline: none;
+}
+
 .wrapper {
   position: relative;
   max-width: 317px;
