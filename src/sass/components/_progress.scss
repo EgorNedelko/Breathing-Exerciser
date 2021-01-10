@@ -19,8 +19,8 @@
 .outline {
    position: absolute;
    // transform: scale(0.9);
-   width: 92%;
-   height: 92%;
+   width: 87%;                           //lower this value to shrink outre circle /100
+   height: 87%;
    border-radius: 50%;
    // background: blue;
    background: rgba(0, 0, 0, 0.35);
@@ -42,7 +42,7 @@
    flex-direction: column;
    align-items: center;
    justify-content: space-between;
-   width: 66%;
+   width: 66%;                            //make this value higher to shrink inner brim /57
    height: 66%;
    border-radius: 50%;
    background: url("../../../assets/img/0.jpg");
@@ -52,12 +52,12 @@
 }
 
 .prep, .inhale, .exhale {
-   padding-top: 30px;
-   font-size: 1.4rem;
+   padding-top: 35px;
+   font-size: 1.7rem;
 }
 .prep-value, .inhale-value, .exhale-value {
-   padding-top: 20px;
-   font-size: 7rem;
+   padding-top: 35px;
+   font-size: 8rem;
    width: 100%;
    text-align: center;
 }

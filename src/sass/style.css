@@ -598,8 +598,8 @@ body {
 
 .outline {
   position: absolute;
-  width: 92%;
-  height: 92%;
+  width: 87%;
+  height: 87%;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.35);
 }
@@ -638,13 +638,13 @@ body {
 }
 
 .prep, .inhale, .exhale {
-  padding-top: 30px;
-  font-size: 1.4rem;
+  padding-top: 35px;
+  font-size: 1.7rem;
 }
 
 .prep-value, .inhale-value, .exhale-value {
-  padding-top: 20px;
-  font-size: 7rem;
+  padding-top: 35px;
+  font-size: 8rem;
   width: 100%;
   text-align: center;
 }

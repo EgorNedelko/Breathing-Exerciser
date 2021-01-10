@@ -18,6 +18,7 @@ const stroke = document.querySelector(".stroke")
 const overlay = document.getElementById("overlay")
 const modalWindow = document.querySelector(".modal-window")
 const modalCloseBtn = document.querySelector(".modal-close-btn")
+const combination = '09876'
 let durationMenuOpen = false
 let durationValue = 0
 let isPaused = true
