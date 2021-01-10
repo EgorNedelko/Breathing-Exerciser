@@ -18,6 +18,7 @@ const stroke = document.querySelector(".stroke")
 const overlay = document.getElementById("overlay")
 const modalWindow = document.querySelector(".modal-window")
 const modalCloseBtn = document.querySelector(".modal-close-btn")
+const tapSound = document.querySelector("audio[data-audio-tap]")
 const combination = '09876'
 let durationMenuOpen = false
 let durationValue = 0
@@ -249,15 +250,16 @@ window.addEventListener('DOMContentLoaded', () => {
 slider.addEventListener('input', (e) => {
    hideTimers()
    stopCountdown()
-   audio.pause()
+   if (audio) audio.pause()
    setDuration(e)
 })
 
 timerBtn.addEventListener('click', () => {
+   tapSound.play()
    if (isPaused == false) {
       hideTimers()
       stopCountdown()
-      audio.pause()
+      if (audio) audio.pause()
       timerBtn.className = "start"
    } else {
       isPaused = false
@@ -268,17 +270,19 @@ timerBtn.addEventListener('click', () => {
 })
 
 styles.forEach(style => style.addEventListener('click', (e) => {
+   tapSound.play()
    hideTimers()
    stopCountdown()
-   audio.pause()
+   if (audio) audio.pause()
    changeStyle(e)
 }))
 
 setDurationBtn.addEventListener('click', () => {
    // if (!durationMenuOpen) {
+      tapSound.play()
       setDurationBtn.classList.add('open')
       stopCountdown()
-      audio.pause()
+      if (audio) audio.pause()
       hideTimers()
       openModal()
       durationMenuOpen = true
@@ -290,6 +294,7 @@ setDurationBtn.addEventListener('click', () => {
 })
 
 modalCloseBtn.addEventListener('click', () => {
+   tapSound.play()
    setDurationBtn.classList.remove('open')
    closeModal()
    durationMenuOpen = false
